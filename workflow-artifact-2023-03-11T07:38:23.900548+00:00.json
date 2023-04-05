@@ -1,0 +1,303 @@
+{
+    "plays": [
+        {
+            "___progress": "100%",
+            "__changed": 1,
+            "__failed": 1,
+            "__ignored": 0,
+            "__in progress": 0,
+            "__ok": 1,
+            "__percent_complete": 100,
+            "__play_name": "localhost",
+            "__progress": "Complete",
+            "__skipped": 0,
+            "__task_count": 2,
+            "__unreachable": 0,
+            "name": "localhost",
+            "pattern": "localhost",
+            "play": "localhost",
+            "play_pattern": "localhost",
+            "play_uuid": "a6c16f76-9091-0eff-9b8f-000000000005",
+            "playbook": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml",
+            "playbook_uuid": "1526cfe1-347f-4700-91b8-fcbe0397c51e",
+            "tasks": [
+                {
+                    "__changed": true,
+                    "__duration": "0s",
+                    "__host": "localhost",
+                    "__number": 0,
+                    "__result": "Ok",
+                    "__task": "Add OneView Host to inventory",
+                    "__task_action": "add_host",
+                    "duration": 0.273387,
+                    "end": "2023-03-11T07:38:14.202098",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "play": "localhost",
+                    "play_pattern": "localhost",
+                    "play_uuid": "a6c16f76-9091-0eff-9b8f-000000000005",
+                    "playbook": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml",
+                    "playbook_uuid": "1526cfe1-347f-4700-91b8-fcbe0397c51e",
+                    "remote_addr": "127.0.0.1",
+                    "res": {
+                        "changed": true,
+                        "msg": "All items completed",
+                        "results": [
+                            {
+                                "_ansible_item_label": {
+                                    "ansible_connection": "local",
+                                    "name": "localhost"
+                                },
+                                "_ansible_no_log": null,
+                                "add_host": {
+                                    "groups": [],
+                                    "host_name": "localhost",
+                                    "host_vars": {
+                                        "ansible_connection": "local"
+                                    }
+                                },
+                                "ansible_loop_var": "item",
+                                "changed": true,
+                                "failed": false,
+                                "item": {
+                                    "ansible_connection": "local",
+                                    "name": "localhost"
+                                }
+                            },
+                            {
+                                "_ansible_item_label": {
+                                    "host_ip": "10.6.55.4",
+                                    "name": "bastion_host"
+                                },
+                                "_ansible_no_log": null,
+                                "add_host": {
+                                    "groups": [],
+                                    "host_name": "bastion_host",
+                                    "host_vars": {
+                                        "ansible_host": "10.6.55.4"
+                                    }
+                                },
+                                "ansible_loop_var": "item",
+                                "changed": true,
+                                "failed": false,
+                                "item": {
+                                    "host_ip": "10.6.55.4",
+                                    "name": "bastion_host"
+                                }
+                            },
+                            {
+                                "_ansible_item_label": {
+                                    "host_ip": "oneview.bcl.redhat.hpecic.com",
+                                    "name": "oneview_host"
+                                },
+                                "_ansible_no_log": null,
+                                "add_host": {
+                                    "groups": [],
+                                    "host_name": "oneview_host",
+                                    "host_vars": {
+                                        "ansible_host": "oneview.bcl.redhat.hpecic.com"
+                                    }
+                                },
+                                "ansible_loop_var": "item",
+                                "changed": true,
+                                "failed": false,
+                                "item": {
+                                    "host_ip": "oneview.bcl.redhat.hpecic.com",
+                                    "name": "oneview_host"
+                                }
+                            }
+                        ]
+                    },
+                    "resolved_action": "ansible.builtin.add_host",
+                    "start": "2023-03-11T07:38:13.928711",
+                    "task": "Add OneView Host to inventory",
+                    "task_action": "add_host",
+                    "task_args": "",
+                    "task_path": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml:13",
+                    "task_uuid": "a6c16f76-9091-0eff-9b8f-000000000007",
+                    "uuid": "effc3f5c-3d47-48c2-af70-1c8c0a7ad89a"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "localhost",
+                    "__number": 1,
+                    "__result": "Failed",
+                    "__task": "Add physical hosts to inventory",
+                    "__task_action": "add_host",
+                    "duration": 0.093394,
+                    "end": "2023-03-11T07:38:14.303029",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "ignore_errors": null,
+                    "play": "localhost",
+                    "play_pattern": "localhost",
+                    "play_uuid": "a6c16f76-9091-0eff-9b8f-000000000005",
+                    "playbook": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml",
+                    "playbook_uuid": "1526cfe1-347f-4700-91b8-fcbe0397c51e",
+                    "remote_addr": "localhost",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "msg": "[{'name': 'rh-bctl-5-gen10', 'ilo_ip': '10.6.55.205', 'host_ip': '10.6.54.205', 'host_nic': 'vmnic4', 'host_bootproto': 'static', 'host_mask': '255.255.255.0', 'host_gw': '10.6.54.1', 'host_nameserver': '{{ bastion_named_serverip }}'}]: 'bastion_named_serverip' is undefined"
+                    },
+                    "resolved_action": "ansible.builtin.add_host",
+                    "start": "2023-03-11T07:38:14.209635",
+                    "task": "Add physical hosts to inventory",
+                    "task_action": "add_host",
+                    "task_args": "",
+                    "task_path": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml:20",
+                    "task_uuid": "a6c16f76-9091-0eff-9b8f-000000000008",
+                    "uuid": "37c0af19-3d62-4de4-8331-ac706cb84a61"
+                }
+            ],
+            "uuid": "a6c16f76-9091-0eff-9b8f-000000000005"
+        }
+    ],
+    "settings_entries": {
+        "ansible-navigator": {
+            "ansible": {
+                "cmdline": "-e @bcluc1_esxideploy_config/extra_vars.yml -e @bcluc1_esxideploy_config/vaulted_vars.yml -e debug=true -e remove=true",
+                "config": {
+                    "help": false
+                },
+                "doc": {
+                    "help": false,
+                    "plugin": {
+                        "type": "module"
+                    }
+                },
+                "inventory": {
+                    "help": false
+                },
+                "playbook": {
+                    "help": false,
+                    "path": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml"
+                }
+            },
+            "ansible-builder": {
+                "help": false,
+                "workdir": "/home/mschreie/projects/bcluc1_esxideploy"
+            },
+            "app": "run",
+            "collection-doc-cache-path": "/home/mschreie/.cache/ansible-navigator/collection_doc_cache.db",
+            "color": {
+                "enable": true,
+                "osc4": true
+            },
+            "editor": {
+                "command": "vi +{line_number} {filename}",
+                "console": true
+            },
+            "exec": {
+                "command": "/bin/bash",
+                "shell": true
+            },
+            "execution-environment": {
+                "container-engine": "podman",
+                "enabled": true,
+                "image": "localhost/bcl-ov:4",
+                "pull": {
+                    "policy": "never"
+                }
+            },
+            "images": {
+                "details": [
+                    "everything"
+                ]
+            },
+            "logging": {
+                "append": true,
+                "file": "/home/mschreie/projects/bcluc1_esxideploy/ansible-navigator.log",
+                "level": "warning"
+            },
+            "mode": "interactive",
+            "playbook-artifact": {
+                "enable": true,
+                "save-as": "{playbook_dir}/{playbook_name}-artifact-{time_stamp}.json"
+            },
+            "settings": {
+                "effective": false,
+                "sample": false,
+                "schema": "json",
+                "sources": false
+            },
+            "time-zone": "UTC"
+        }
+    },
+    "settings_sources": {
+        "ansible-navigator.ansible-builder.help": "Defaults",
+        "ansible-navigator.ansible-builder.workdir": "Defaults",
+        "ansible-navigator.ansible-lint.config": "Not set",
+        "ansible-navigator.ansible-lint.lintables": "Not set",
+        "ansible-navigator.ansible-runner.artifact-dir": "Not set",
+        "ansible-navigator.ansible-runner.rotate-artifacts-count": "Not set",
+        "ansible-navigator.ansible-runner.timeout": "Not set",
+        "ansible-navigator.ansible.cmdline": "Previous cli command",
+        "ansible-navigator.ansible.config.help": "Defaults",
+        "ansible-navigator.ansible.config.path": "Not set",
+        "ansible-navigator.ansible.doc.help": "Defaults",
+        "ansible-navigator.ansible.doc.plugin.name": "Not set",
+        "ansible-navigator.ansible.doc.plugin.type": "Defaults",
+        "ansible-navigator.ansible.inventory.entries": "Not set",
+        "ansible-navigator.ansible.inventory.help": "Defaults",
+        "ansible-navigator.ansible.playbook.help": "Defaults",
+        "ansible-navigator.ansible.playbook.path": "Previous cli command",
+        "ansible-navigator.app": "Command line",
+        "ansible-navigator.collection-doc-cache-path": "Defaults",
+        "ansible-navigator.color.enable": "Defaults",
+        "ansible-navigator.color.osc4": "Defaults",
+        "ansible-navigator.editor.command": "Defaults",
+        "ansible-navigator.editor.console": "Defaults",
+        "ansible-navigator.exec.command": "Defaults",
+        "ansible-navigator.exec.shell": "Defaults",
+        "ansible-navigator.execution-environment.container-engine": "Automatically determined",
+        "ansible-navigator.execution-environment.container-options": "Not set",
+        "ansible-navigator.execution-environment.enabled": "Defaults",
+        "ansible-navigator.execution-environment.environment-variables.pass": "Not set",
+        "ansible-navigator.execution-environment.environment-variables.set": "Not set",
+        "ansible-navigator.execution-environment.image": "Previous cli command",
+        "ansible-navigator.execution-environment.pull.arguments": "Not set",
+        "ansible-navigator.execution-environment.pull.policy": "Previous cli command",
+        "ansible-navigator.execution-environment.volume-mounts": "Not set",
+        "ansible-navigator.images.details": "Defaults",
+        "ansible-navigator.inventory-columns": "Not set",
+        "ansible-navigator.logging.append": "Defaults",
+        "ansible-navigator.logging.file": "Defaults",
+        "ansible-navigator.logging.level": "Defaults",
+        "ansible-navigator.mode": "Defaults",
+        "ansible-navigator.playbook-artifact.enable": "Defaults",
+        "ansible-navigator.playbook-artifact.replay": "Not set",
+        "ansible-navigator.playbook-artifact.save-as": "Defaults",
+        "ansible-navigator.settings.effective": "Defaults",
+        "ansible-navigator.settings.sample": "Defaults",
+        "ansible-navigator.settings.schema": "Defaults",
+        "ansible-navigator.settings.sources": "Defaults",
+        "ansible-navigator.time-zone": "Defaults",
+        "settings_file_path": "None",
+        "settings_file_source": "None"
+    },
+    "status": "failed",
+    "status_color": 9,
+    "stdout": [
+        "\u001b[1;35m[WARNING]: provided hosts list is empty, only localhost is available. Note that\u001b[0m",
+        "\u001b[1;35mthe implicit localhost does not match 'all'\u001b[0m",
+        "",
+        "PLAY [localhost] ***************************************************************",
+        "",
+        "TASK [Add OneView Host to inventory] *******************************************",
+        "\u001b[1;35m[WARNING]: A duplicate localhost-like entry was found (localhost). First found\u001b[0m",
+        "\u001b[1;35mlocalhost was localhost\u001b[0m",
+        "\u001b[0;33mchanged: [localhost] => (item={'name': 'localhost', 'ansible_connection': 'local'})\u001b[0m",
+        "\u001b[0;33mchanged: [localhost] => (item={'name': 'bastion_host', 'host_ip': '10.6.55.4'})\u001b[0m",
+        "\u001b[0;33mchanged: [localhost] => (item={'name': 'oneview_host', 'host_ip': 'oneview.bcl.redhat.hpecic.com'})\u001b[0m",
+        "",
+        "TASK [Add physical hosts to inventory] *****************************************",
+        "\u001b[0;31mfatal: [localhost]: FAILED! => {\"msg\": \"[{'name': 'rh-bctl-5-gen10', 'ilo_ip': '10.6.55.205', 'host_ip': '10.6.54.205', 'host_nic': 'vmnic4', 'host_bootproto': 'static', 'host_mask': '255.255.255.0', 'host_gw': '10.6.54.1', 'host_nameserver': '{{ bastion_named_serverip }}'}]: 'bastion_named_serverip' is undefined\"}\u001b[0m",
+        "",
+        "NO MORE HOSTS LEFT *************************************************************",
+        "",
+        "PLAY RECAP *********************************************************************",
+        "\u001b[0;31mlocalhost\u001b[0m                  : \u001b[0;32mok=1   \u001b[0m \u001b[0;33mchanged=1   \u001b[0m unreachable=0    \u001b[0;31mfailed=1   \u001b[0m skipped=0    rescued=0    ignored=0   "
+    ],
+    "version": "2.0.0"
+}

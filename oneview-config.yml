@@ -1,0 +1,10 @@
+---
+- hosts: esx_hosts
+  gather_facts: false
+
+  collections:
+    - hpe.oneview
+  tasks:
+    - name: configure physical hosts via oneview
+      ansible.builtin.include_role:
+        name: mschreie.bcl.oneview_config

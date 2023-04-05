@@ -1,0 +1,26 @@
+---
+- hosts: esx_hosts
+  gather_facts: false
+  serial: 1
+
+  collections:
+    - hpe.oneview
+    - ansible.posix 
+
+  tasks:
+    # this needs to run one at a time => serial: 1 
+    - name: sysprep esxi iso for hands free installation
+      ansible.builtin.include_role:
+        name: mschreie.bcl.esxi_iso_prep
+
+- hosts: esx_hosts
+  gather_facts: false
+
+  collections:
+    - hpe.oneview
+    - ansible.posix 
+
+  tasks:
+  - name: install esxi on bare metal nodes
+    ansible.builtin.include_role:
+      name: mschreie.bcl.esxi_iso_boot

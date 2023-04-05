@@ -1,0 +1,1275 @@
+{
+    "plays": [
+        {
+            "___progress": "100%",
+            "__changed": 3,
+            "__failed": 0,
+            "__ignored": 0,
+            "__in progress": 0,
+            "__ok": 3,
+            "__percent_complete": 100,
+            "__play_name": "localhost",
+            "__progress": "Complete",
+            "__skipped": 0,
+            "__task_count": 3,
+            "__unreachable": 0,
+            "name": "localhost",
+            "pattern": "localhost",
+            "play": "localhost",
+            "play_pattern": "localhost",
+            "play_uuid": "9acff4cc-7e90-9eb1-7105-000000000005",
+            "playbook": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml",
+            "playbook_uuid": "dcc04618-0173-49ea-8117-33116bd9ada6",
+            "tasks": [
+                {
+                    "__changed": true,
+                    "__duration": "0s",
+                    "__host": "localhost",
+                    "__number": 0,
+                    "__result": "Ok",
+                    "__task": "Add OneView Host to inventory",
+                    "__task_action": "add_host",
+                    "duration": 0.077837,
+                    "end": "2023-03-28T09:10:39.415331",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "play": "localhost",
+                    "play_pattern": "localhost",
+                    "play_uuid": "9acff4cc-7e90-9eb1-7105-000000000005",
+                    "playbook": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml",
+                    "playbook_uuid": "dcc04618-0173-49ea-8117-33116bd9ada6",
+                    "remote_addr": "127.0.0.1",
+                    "res": {
+                        "changed": true,
+                        "msg": "All items completed",
+                        "results": [
+                            {
+                                "_ansible_item_label": {
+                                    "ansible_connection": "local",
+                                    "name": "localhost"
+                                },
+                                "_ansible_no_log": null,
+                                "add_host": {
+                                    "groups": [],
+                                    "host_name": "localhost",
+                                    "host_vars": {
+                                        "ansible_connection": "local"
+                                    }
+                                },
+                                "ansible_loop_var": "item",
+                                "changed": true,
+                                "failed": false,
+                                "item": {
+                                    "ansible_connection": "local",
+                                    "name": "localhost"
+                                }
+                            },
+                            {
+                                "_ansible_item_label": {
+                                    "host_ip": "10.6.55.4",
+                                    "name": "bastion_host"
+                                },
+                                "_ansible_no_log": null,
+                                "add_host": {
+                                    "groups": [],
+                                    "host_name": "bastion_host",
+                                    "host_vars": {
+                                        "ansible_host": "10.6.55.4"
+                                    }
+                                },
+                                "ansible_loop_var": "item",
+                                "changed": true,
+                                "failed": false,
+                                "item": {
+                                    "host_ip": "10.6.55.4",
+                                    "name": "bastion_host"
+                                }
+                            },
+                            {
+                                "_ansible_item_label": {
+                                    "host_ip": "oneview.bcl.redhat.hpecic.com",
+                                    "name": "oneview_host"
+                                },
+                                "_ansible_no_log": null,
+                                "add_host": {
+                                    "groups": [],
+                                    "host_name": "oneview_host",
+                                    "host_vars": {
+                                        "ansible_host": "oneview.bcl.redhat.hpecic.com"
+                                    }
+                                },
+                                "ansible_loop_var": "item",
+                                "changed": true,
+                                "failed": false,
+                                "item": {
+                                    "host_ip": "oneview.bcl.redhat.hpecic.com",
+                                    "name": "oneview_host"
+                                }
+                            }
+                        ]
+                    },
+                    "resolved_action": "ansible.builtin.add_host",
+                    "start": "2023-03-28T09:10:39.337494",
+                    "task": "Add OneView Host to inventory",
+                    "task_action": "add_host",
+                    "task_args": "",
+                    "task_path": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml:13",
+                    "task_uuid": "9acff4cc-7e90-9eb1-7105-000000000007",
+                    "uuid": "285fd86c-9aa4-4ae4-afd4-bfdd4c8c9b4c"
+                },
+                {
+                    "__changed": true,
+                    "__duration": "0s",
+                    "__host": "localhost",
+                    "__number": 1,
+                    "__result": "Ok",
+                    "__task": "Add physical hosts to inventory",
+                    "__task_action": "add_host",
+                    "duration": 0.053377,
+                    "end": "2023-03-28T09:10:39.474416",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "play": "localhost",
+                    "play_pattern": "localhost",
+                    "play_uuid": "9acff4cc-7e90-9eb1-7105-000000000005",
+                    "playbook": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml",
+                    "playbook_uuid": "dcc04618-0173-49ea-8117-33116bd9ada6",
+                    "remote_addr": "localhost",
+                    "res": {
+                        "changed": true,
+                        "msg": "All items completed",
+                        "results": [
+                            {
+                                "_ansible_item_label": {
+                                    "host_bootproto": "static",
+                                    "host_gw": "10.6.54.1",
+                                    "host_ip": "10.6.54.205",
+                                    "host_mask": "255.255.255.0",
+                                    "host_nameserver": "10.6.55.4",
+                                    "host_nic": "vmnic4",
+                                    "ilo_ip": "10.6.55.205",
+                                    "name": "rh-bctl-5-gen10"
+                                },
+                                "_ansible_no_log": null,
+                                "add_host": {
+                                    "groups": [
+                                        "esx_hosts",
+                                        "oneview_targets"
+                                    ],
+                                    "host_name": "rh-bctl-5-gen10",
+                                    "host_vars": {
+                                        "ansible_host": "10.6.54.205",
+                                        "host_bootproto": "static",
+                                        "host_gw": "10.6.54.1",
+                                        "host_ip": "10.6.54.205",
+                                        "host_mask": "255.255.255.0",
+                                        "host_nameserver": "10.6.55.4",
+                                        "host_nic": "vmnic4",
+                                        "ilo_ip": "10.6.55.205"
+                                    }
+                                },
+                                "ansible_loop_var": "item",
+                                "changed": true,
+                                "failed": false,
+                                "item": {
+                                    "host_bootproto": "static",
+                                    "host_gw": "10.6.54.1",
+                                    "host_ip": "10.6.54.205",
+                                    "host_mask": "255.255.255.0",
+                                    "host_nameserver": "10.6.55.4",
+                                    "host_nic": "vmnic4",
+                                    "ilo_ip": "10.6.55.205",
+                                    "name": "rh-bctl-5-gen10"
+                                }
+                            }
+                        ]
+                    },
+                    "resolved_action": "ansible.builtin.add_host",
+                    "start": "2023-03-28T09:10:39.421039",
+                    "task": "Add physical hosts to inventory",
+                    "task_action": "add_host",
+                    "task_args": "",
+                    "task_path": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml:20",
+                    "task_uuid": "9acff4cc-7e90-9eb1-7105-000000000008",
+                    "uuid": "eb835037-a114-4771-a5c4-16a6367463b5"
+                },
+                {
+                    "__changed": true,
+                    "__duration": "0s",
+                    "__host": "localhost",
+                    "__number": 2,
+                    "__result": "Ok",
+                    "__task": "Add additional Host to inventory",
+                    "__task_action": "add_host",
+                    "duration": 0.046855,
+                    "end": "2023-03-28T09:10:39.527638",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "play": "localhost",
+                    "play_pattern": "localhost",
+                    "play_uuid": "9acff4cc-7e90-9eb1-7105-000000000005",
+                    "playbook": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml",
+                    "playbook_uuid": "dcc04618-0173-49ea-8117-33116bd9ada6",
+                    "remote_addr": "localhost",
+                    "res": {
+                        "changed": true,
+                        "msg": "All items completed",
+                        "results": [
+                            {
+                                "_ansible_item_label": "bastion",
+                                "_ansible_no_log": null,
+                                "add_host": {
+                                    "groups": [],
+                                    "host_name": "bastion",
+                                    "host_vars": {
+                                        "ansible_host": "10.6.55.4"
+                                    }
+                                },
+                                "ansible_loop_var": "item",
+                                "changed": true,
+                                "failed": false,
+                                "item": "bastion"
+                            },
+                            {
+                                "_ansible_item_label": "controller",
+                                "_ansible_no_log": null,
+                                "add_host": {
+                                    "groups": [],
+                                    "host_name": "aap-controller",
+                                    "host_vars": {
+                                        "ansible_host": "10.6.55.2"
+                                    }
+                                },
+                                "ansible_loop_var": "item",
+                                "changed": true,
+                                "failed": false,
+                                "item": "controller"
+                            },
+                            {
+                                "_ansible_item_label": "vcenter",
+                                "_ansible_no_log": null,
+                                "add_host": {
+                                    "groups": [],
+                                    "host_name": "vcenter",
+                                    "host_vars": {
+                                        "ansible_host": "10.6.55.10"
+                                    }
+                                },
+                                "ansible_loop_var": "item",
+                                "changed": true,
+                                "failed": false,
+                                "item": "vcenter"
+                            }
+                        ]
+                    },
+                    "resolved_action": "ansible.builtin.add_host",
+                    "start": "2023-03-28T09:10:39.480783",
+                    "task": "Add additional Host to inventory",
+                    "task_action": "add_host",
+                    "task_args": "",
+                    "task_path": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml:38",
+                    "task_uuid": "9acff4cc-7e90-9eb1-7105-000000000009",
+                    "uuid": "7d2583c5-f56d-4bd7-9dfb-578f1646e623"
+                }
+            ],
+            "uuid": "9acff4cc-7e90-9eb1-7105-000000000005"
+        },
+        {
+            "___progress": "100%",
+            "__changed": 0,
+            "__failed": 0,
+            "__ignored": 0,
+            "__in progress": 0,
+            "__ok": 0,
+            "__percent_complete": 100,
+            "__play_name": "localhost",
+            "__progress": "Complete",
+            "__skipped": 1,
+            "__task_count": 1,
+            "__unreachable": 0,
+            "name": "localhost",
+            "pattern": "localhost",
+            "play": "localhost",
+            "play_pattern": "localhost",
+            "play_uuid": "9acff4cc-7e90-9eb1-7105-00000000000b",
+            "playbook": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml",
+            "playbook_uuid": "dcc04618-0173-49ea-8117-33116bd9ada6",
+            "tasks": [
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "localhost",
+                    "__number": 0,
+                    "__result": "Skipped",
+                    "__task": "include nsupdate",
+                    "__task_action": "ansible.builtin.include_role",
+                    "duration": 0.046508,
+                    "end": "2023-03-28T09:10:39.659527",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "play": "localhost",
+                    "play_pattern": "localhost",
+                    "play_uuid": "9acff4cc-7e90-9eb1-7105-00000000000b",
+                    "playbook": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml",
+                    "playbook_uuid": "dcc04618-0173-49ea-8117-33116bd9ada6",
+                    "remote_addr": "localhost",
+                    "resolved_action": null,
+                    "start": "2023-03-28T09:10:39.613019",
+                    "task": "include nsupdate",
+                    "task_action": "ansible.builtin.include_role",
+                    "task_args": "",
+                    "task_path": "/home/mschreie/projects/bcluc1_esxideploy/nsupdate.yml:18",
+                    "task_uuid": "9acff4cc-7e90-9eb1-7105-00000000000d",
+                    "uuid": "2a4b0952-eb8c-4db1-b46c-354228188fc7"
+                }
+            ],
+            "uuid": "9acff4cc-7e90-9eb1-7105-00000000000b"
+        },
+        {
+            "___progress": "100%",
+            "__changed": 0,
+            "__failed": 0,
+            "__ignored": 0,
+            "__in progress": 0,
+            "__ok": 0,
+            "__percent_complete": 100,
+            "__play_name": "esx_hosts",
+            "__progress": "Complete",
+            "__skipped": 1,
+            "__task_count": 1,
+            "__unreachable": 0,
+            "name": "esx_hosts",
+            "pattern": "esx_hosts",
+            "play": "esx_hosts",
+            "play_pattern": "esx_hosts",
+            "play_uuid": "9acff4cc-7e90-9eb1-7105-00000000000f",
+            "playbook": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml",
+            "playbook_uuid": "dcc04618-0173-49ea-8117-33116bd9ada6",
+            "tasks": [
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "rh-bctl-5-gen10",
+                    "__number": 0,
+                    "__result": "Skipped",
+                    "__task": "configure physical hosts via oneview",
+                    "__task_action": "ansible.builtin.include_role",
+                    "duration": 0.031256,
+                    "end": "2023-03-28T09:10:39.716339",
+                    "event_loop": null,
+                    "host": "rh-bctl-5-gen10",
+                    "play": "esx_hosts",
+                    "play_pattern": "esx_hosts",
+                    "play_uuid": "9acff4cc-7e90-9eb1-7105-00000000000f",
+                    "playbook": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml",
+                    "playbook_uuid": "dcc04618-0173-49ea-8117-33116bd9ada6",
+                    "remote_addr": "rh-bctl-5-gen10",
+                    "resolved_action": null,
+                    "start": "2023-03-28T09:10:39.685083",
+                    "task": "configure physical hosts via oneview",
+                    "task_action": "ansible.builtin.include_role",
+                    "task_args": "",
+                    "task_path": "/home/mschreie/projects/bcluc1_esxideploy/oneview-config.yml:8",
+                    "task_uuid": "9acff4cc-7e90-9eb1-7105-000000000011",
+                    "uuid": "e659c4d5-c8e1-4175-a1f7-098e6cec20c2"
+                }
+            ],
+            "uuid": "9acff4cc-7e90-9eb1-7105-00000000000f"
+        },
+        {
+            "___progress": "100%",
+            "__changed": 0,
+            "__failed": 0,
+            "__ignored": 0,
+            "__in progress": 0,
+            "__ok": 0,
+            "__percent_complete": 100,
+            "__play_name": "esx_hosts",
+            "__progress": "Complete",
+            "__skipped": 1,
+            "__task_count": 1,
+            "__unreachable": 0,
+            "name": "esx_hosts",
+            "pattern": "esx_hosts",
+            "play": "esx_hosts",
+            "play_pattern": "esx_hosts",
+            "play_uuid": "9acff4cc-7e90-9eb1-7105-000000000013",
+            "playbook": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml",
+            "playbook_uuid": "dcc04618-0173-49ea-8117-33116bd9ada6",
+            "tasks": [
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "rh-bctl-5-gen10",
+                    "__number": 0,
+                    "__result": "Skipped",
+                    "__task": "sysprep esxi iso for hands free installation",
+                    "__task_action": "ansible.builtin.include_role",
+                    "duration": 0.028526,
+                    "end": "2023-03-28T09:10:39.767720",
+                    "event_loop": null,
+                    "host": "rh-bctl-5-gen10",
+                    "play": "esx_hosts",
+                    "play_pattern": "esx_hosts",
+                    "play_uuid": "9acff4cc-7e90-9eb1-7105-000000000013",
+                    "playbook": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml",
+                    "playbook_uuid": "dcc04618-0173-49ea-8117-33116bd9ada6",
+                    "remote_addr": "rh-bctl-5-gen10",
+                    "resolved_action": null,
+                    "start": "2023-03-28T09:10:39.739194",
+                    "task": "sysprep esxi iso for hands free installation",
+                    "task_action": "ansible.builtin.include_role",
+                    "task_args": "",
+                    "task_path": "/home/mschreie/projects/bcluc1_esxideploy/esxi-install.yml:12",
+                    "task_uuid": "9acff4cc-7e90-9eb1-7105-000000000015",
+                    "uuid": "e70c9c2a-ba02-40d5-8871-1c4d0cd23604"
+                }
+            ],
+            "uuid": "9acff4cc-7e90-9eb1-7105-000000000013"
+        },
+        {
+            "___progress": "100%",
+            "__changed": 0,
+            "__failed": 0,
+            "__ignored": 0,
+            "__in progress": 0,
+            "__ok": 0,
+            "__percent_complete": 100,
+            "__play_name": "esx_hosts",
+            "__progress": "Complete",
+            "__skipped": 1,
+            "__task_count": 1,
+            "__unreachable": 0,
+            "name": "esx_hosts",
+            "pattern": "esx_hosts",
+            "play": "esx_hosts",
+            "play_pattern": "esx_hosts",
+            "play_uuid": "9acff4cc-7e90-9eb1-7105-000000000016",
+            "playbook": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml",
+            "playbook_uuid": "dcc04618-0173-49ea-8117-33116bd9ada6",
+            "tasks": [
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "rh-bctl-5-gen10",
+                    "__number": 0,
+                    "__result": "Skipped",
+                    "__task": "install esxi on bare metal nodes",
+                    "__task_action": "ansible.builtin.include_role",
+                    "duration": 0.030741,
+                    "end": "2023-03-28T09:10:39.824613",
+                    "event_loop": null,
+                    "host": "rh-bctl-5-gen10",
+                    "play": "esx_hosts",
+                    "play_pattern": "esx_hosts",
+                    "play_uuid": "9acff4cc-7e90-9eb1-7105-000000000016",
+                    "playbook": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml",
+                    "playbook_uuid": "dcc04618-0173-49ea-8117-33116bd9ada6",
+                    "remote_addr": "rh-bctl-5-gen10",
+                    "resolved_action": null,
+                    "start": "2023-03-28T09:10:39.793872",
+                    "task": "install esxi on bare metal nodes",
+                    "task_action": "ansible.builtin.include_role",
+                    "task_args": "",
+                    "task_path": "/home/mschreie/projects/bcluc1_esxideploy/esxi-install.yml:24",
+                    "task_uuid": "9acff4cc-7e90-9eb1-7105-000000000018",
+                    "uuid": "70a44bfc-194a-4998-8eea-2eecb64a634a"
+                }
+            ],
+            "uuid": "9acff4cc-7e90-9eb1-7105-000000000016"
+        },
+        {
+            "___progress": "100%",
+            "__changed": 0,
+            "__failed": 0,
+            "__ignored": 0,
+            "__in progress": 0,
+            "__ok": 0,
+            "__percent_complete": 100,
+            "__play_name": "esx_hosts",
+            "__progress": "Complete",
+            "__skipped": 1,
+            "__task_count": 1,
+            "__unreachable": 0,
+            "name": "esx_hosts",
+            "pattern": "esx_hosts",
+            "play": "esx_hosts",
+            "play_pattern": "esx_hosts",
+            "play_uuid": "9acff4cc-7e90-9eb1-7105-00000000001a",
+            "playbook": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml",
+            "playbook_uuid": "dcc04618-0173-49ea-8117-33116bd9ada6",
+            "tasks": [
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "rh-bctl-5-gen10",
+                    "__number": 0,
+                    "__result": "Skipped",
+                    "__task": "add esxi hosts to vcenter",
+                    "__task_action": "ansible.builtin.include_role",
+                    "duration": 0.028284,
+                    "end": "2023-03-28T09:10:39.876279",
+                    "event_loop": null,
+                    "host": "rh-bctl-5-gen10",
+                    "play": "esx_hosts",
+                    "play_pattern": "esx_hosts",
+                    "play_uuid": "9acff4cc-7e90-9eb1-7105-00000000001a",
+                    "playbook": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml",
+                    "playbook_uuid": "dcc04618-0173-49ea-8117-33116bd9ada6",
+                    "remote_addr": "rh-bctl-5-gen10",
+                    "resolved_action": null,
+                    "start": "2023-03-28T09:10:39.847995",
+                    "task": "add esxi hosts to vcenter",
+                    "task_action": "ansible.builtin.include_role",
+                    "task_args": "",
+                    "task_path": "/home/mschreie/projects/bcluc1_esxideploy/add-esxi-to-vcenter.yml:9",
+                    "task_uuid": "9acff4cc-7e90-9eb1-7105-00000000001c",
+                    "uuid": "25c74e7e-57a4-4822-a37b-9a3fc54a92c1"
+                }
+            ],
+            "uuid": "9acff4cc-7e90-9eb1-7105-00000000001a"
+        },
+        {
+            "___progress": "100%",
+            "__changed": 0,
+            "__failed": 0,
+            "__ignored": 0,
+            "__in progress": 0,
+            "__ok": 3,
+            "__percent_complete": 100,
+            "__play_name": "esx_hosts",
+            "__progress": "Complete",
+            "__skipped": 1,
+            "__task_count": 4,
+            "__unreachable": 0,
+            "name": "esx_hosts",
+            "pattern": "esx_hosts",
+            "play": "esx_hosts",
+            "play_pattern": "esx_hosts",
+            "play_uuid": "9acff4cc-7e90-9eb1-7105-00000000001e",
+            "playbook": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml",
+            "playbook_uuid": "dcc04618-0173-49ea-8117-33116bd9ada6",
+            "tasks": [
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "rh-bctl-5-gen10",
+                    "__number": 0,
+                    "__result": "Ok",
+                    "__task": "add esxi hosts to vcenter",
+                    "__task_action": "ansible.builtin.include_role",
+                    "duration": 0.033502,
+                    "end": "2023-03-28T09:10:39.932818",
+                    "event_loop": null,
+                    "host": "rh-bctl-5-gen10",
+                    "play": "esx_hosts",
+                    "play_pattern": "esx_hosts",
+                    "play_uuid": "9acff4cc-7e90-9eb1-7105-00000000001e",
+                    "playbook": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml",
+                    "playbook_uuid": "dcc04618-0173-49ea-8117-33116bd9ada6",
+                    "remote_addr": "rh-bctl-5-gen10",
+                    "res": {
+                        "changed": false,
+                        "include_args": {
+                            "name": "mschreie.bcl.add_esxi_to_vcenter"
+                        }
+                    },
+                    "resolved_action": null,
+                    "start": "2023-03-28T09:10:39.899316",
+                    "task": "add esxi hosts to vcenter",
+                    "task_action": "ansible.builtin.include_role",
+                    "task_args": "",
+                    "task_path": "/home/mschreie/projects/bcluc1_esxideploy/add-esxi-to-vcenter.yml:9",
+                    "task_uuid": "9acff4cc-7e90-9eb1-7105-000000000020",
+                    "uuid": "95a35099-f641-4bca-a991-a337de307657"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "rh-bctl-5-gen10",
+                    "__number": 1,
+                    "__result": "Skipped",
+                    "__task": "Add esxi hosts to vcenter",
+                    "__task_action": "ansible.builtin.include_tasks",
+                    "duration": 0.0377,
+                    "end": "2023-03-28T09:10:39.983254",
+                    "event_loop": null,
+                    "host": "rh-bctl-5-gen10",
+                    "play": "esx_hosts",
+                    "play_pattern": "esx_hosts",
+                    "play_uuid": "9acff4cc-7e90-9eb1-7105-00000000001e",
+                    "playbook": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml",
+                    "playbook_uuid": "dcc04618-0173-49ea-8117-33116bd9ada6",
+                    "remote_addr": "rh-bctl-5-gen10",
+                    "resolved_action": null,
+                    "resolved_role": "mschreie.bcl.add_esxi_to_vcenter",
+                    "role": "add_esxi_to_vcenter",
+                    "start": "2023-03-28T09:10:39.945554",
+                    "task": "Add esxi hosts to vcenter",
+                    "task_action": "ansible.builtin.include_tasks",
+                    "task_args": "",
+                    "task_path": "/home/mschreie/projects/bcluc1_esxideploy/collections/ansible_collections/mschreie/bcl/roles/add_esxi_to_vcenter/tasks/main.yml:2",
+                    "task_uuid": "9acff4cc-7e90-9eb1-7105-0000000000b0",
+                    "uuid": "dca81727-8390-40a7-90b3-df75fd6ed633"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "rh-bctl-5-gen10",
+                    "__number": 2,
+                    "__result": "Ok",
+                    "__task": "Remove esxi hosts from vcenter",
+                    "__task_action": "ansible.builtin.include_tasks",
+                    "duration": 0.031127,
+                    "end": "2023-03-28T09:10:40.019604",
+                    "event_loop": null,
+                    "host": "rh-bctl-5-gen10",
+                    "play": "esx_hosts",
+                    "play_pattern": "esx_hosts",
+                    "play_uuid": "9acff4cc-7e90-9eb1-7105-00000000001e",
+                    "playbook": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml",
+                    "playbook_uuid": "dcc04618-0173-49ea-8117-33116bd9ada6",
+                    "remote_addr": "rh-bctl-5-gen10",
+                    "res": {
+                        "changed": false,
+                        "include": "remove-esxi-from-vcenter.yml",
+                        "include_args": {}
+                    },
+                    "resolved_action": null,
+                    "resolved_role": "mschreie.bcl.add_esxi_to_vcenter",
+                    "role": "add_esxi_to_vcenter",
+                    "start": "2023-03-28T09:10:39.988477",
+                    "task": "Remove esxi hosts from vcenter",
+                    "task_action": "ansible.builtin.include_tasks",
+                    "task_args": "",
+                    "task_path": "/home/mschreie/projects/bcluc1_esxideploy/collections/ansible_collections/mschreie/bcl/roles/add_esxi_to_vcenter/tasks/main.yml:8",
+                    "task_uuid": "9acff4cc-7e90-9eb1-7105-0000000000b1",
+                    "uuid": "74a67e1d-35c7-4e77-a76e-293a410f1546"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "2s",
+                    "__host": "rh-bctl-5-gen10",
+                    "__number": 3,
+                    "__result": "Ok",
+                    "__task": "Disconnect the host(s)",
+                    "__task_action": "community.vmware.vmware_host",
+                    "duration": 1.631837,
+                    "end": "2023-03-28T09:10:41.668435",
+                    "event_loop": null,
+                    "host": "rh-bctl-5-gen10",
+                    "play": "esx_hosts",
+                    "play_pattern": "esx_hosts",
+                    "play_uuid": "9acff4cc-7e90-9eb1-7105-00000000001e",
+                    "playbook": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml",
+                    "playbook_uuid": "dcc04618-0173-49ea-8117-33116bd9ada6",
+                    "remote_addr": "rh-bctl-5-gen10",
+                    "res": {
+                        "_ansible_delegated_vars": {
+                            "ansible_connection": "local",
+                            "ansible_host": "localhost",
+                            "ansible_port": null,
+                            "ansible_user": null
+                        },
+                        "_ansible_no_log": null,
+                        "changed": false,
+                        "invocation": {
+                            "module_args": {
+                                "add_connected": true,
+                                "cluster_name": null,
+                                "datacenter_name": "bcl",
+                                "esxi_hostname": "10.6.54.205",
+                                "esxi_password": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+                                "esxi_ssl_thumbprint": "",
+                                "esxi_username": "root",
+                                "fetch_ssl_thumbprint": true,
+                                "folder": "/bcl/host/hosts",
+                                "force_connection": true,
+                                "hostname": "10.6.55.10",
+                                "password": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+                                "port": 443,
+                                "proxy_host": null,
+                                "proxy_port": null,
+                                "reconnect_disconnected": true,
+                                "state": "absent",
+                                "username": "Administrator",
+                                "validate_certs": false
+                            }
+                        },
+                        "result": "Host already disconnected",
+                        "warnings": [
+                            "Distribution rhel 8.7 on host rh-bctl-5-gen10 should use /usr/libexec/platform-python, but is using /usr/bin/python3.9, since the discovered platform python interpreter was not present. See https://docs.ansible.com/ansible-core/2.13/reference_appendices/interpreter_discovery.html for more information."
+                        ]
+                    },
+                    "resolved_action": "community.vmware.vmware_host",
+                    "resolved_role": "mschreie.bcl.add_esxi_to_vcenter",
+                    "role": "add_esxi_to_vcenter",
+                    "start": "2023-03-28T09:10:40.036598",
+                    "task": "Disconnect the host(s)",
+                    "task_action": "community.vmware.vmware_host",
+                    "task_args": "",
+                    "task_path": "/home/mschreie/projects/bcluc1_esxideploy/collections/ansible_collections/mschreie/bcl/roles/add_esxi_to_vcenter/tasks/remove-esxi-from-vcenter.yml:2",
+                    "task_uuid": "9acff4cc-7e90-9eb1-7105-0000000000c8",
+                    "uuid": "5184273f-fdc2-43eb-a6c3-acbfe10c511b"
+                }
+            ],
+            "uuid": "9acff4cc-7e90-9eb1-7105-00000000001e"
+        },
+        {
+            "___progress": "100%",
+            "__changed": 0,
+            "__failed": 0,
+            "__ignored": 1,
+            "__in progress": 0,
+            "__ok": 4,
+            "__percent_complete": 100,
+            "__play_name": "esx_hosts",
+            "__progress": "Complete",
+            "__skipped": 1,
+            "__task_count": 6,
+            "__unreachable": 0,
+            "name": "esx_hosts",
+            "pattern": "esx_hosts",
+            "play": "esx_hosts",
+            "play_pattern": "esx_hosts",
+            "play_uuid": "9acff4cc-7e90-9eb1-7105-000000000022",
+            "playbook": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml",
+            "playbook_uuid": "dcc04618-0173-49ea-8117-33116bd9ada6",
+            "tasks": [
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "rh-bctl-5-gen10",
+                    "__number": 0,
+                    "__result": "Ok",
+                    "__task": "configure physical hosts via oneview",
+                    "__task_action": "ansible.builtin.include_role",
+                    "duration": 0.033138,
+                    "end": "2023-03-28T09:10:41.724503",
+                    "event_loop": null,
+                    "host": "rh-bctl-5-gen10",
+                    "play": "esx_hosts",
+                    "play_pattern": "esx_hosts",
+                    "play_uuid": "9acff4cc-7e90-9eb1-7105-000000000022",
+                    "playbook": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml",
+                    "playbook_uuid": "dcc04618-0173-49ea-8117-33116bd9ada6",
+                    "remote_addr": "rh-bctl-5-gen10",
+                    "res": {
+                        "changed": false,
+                        "include_args": {
+                            "name": "mschreie.bcl.oneview_config"
+                        }
+                    },
+                    "resolved_action": null,
+                    "start": "2023-03-28T09:10:41.691365",
+                    "task": "configure physical hosts via oneview",
+                    "task_action": "ansible.builtin.include_role",
+                    "task_args": "",
+                    "task_path": "/home/mschreie/projects/bcluc1_esxideploy/oneview-config.yml:8",
+                    "task_uuid": "9acff4cc-7e90-9eb1-7105-000000000024",
+                    "uuid": "20f97ba9-fd22-47fa-b457-72fb4d7e9673"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "rh-bctl-5-gen10",
+                    "__number": 1,
+                    "__result": "Skipped",
+                    "__task": "Oneview Config",
+                    "__task_action": "ansible.builtin.include_tasks",
+                    "duration": 0.038831,
+                    "end": "2023-03-28T09:10:41.776053",
+                    "event_loop": null,
+                    "host": "rh-bctl-5-gen10",
+                    "play": "esx_hosts",
+                    "play_pattern": "esx_hosts",
+                    "play_uuid": "9acff4cc-7e90-9eb1-7105-000000000022",
+                    "playbook": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml",
+                    "playbook_uuid": "dcc04618-0173-49ea-8117-33116bd9ada6",
+                    "remote_addr": "rh-bctl-5-gen10",
+                    "resolved_action": null,
+                    "resolved_role": "mschreie.bcl.oneview_config",
+                    "role": "oneview_config",
+                    "start": "2023-03-28T09:10:41.737222",
+                    "task": "Oneview Config",
+                    "task_action": "ansible.builtin.include_tasks",
+                    "task_args": "",
+                    "task_path": "/home/mschreie/projects/bcluc1_esxideploy/collections/ansible_collections/mschreie/bcl/roles/oneview_config/tasks/main.yml:2",
+                    "task_uuid": "9acff4cc-7e90-9eb1-7105-0000000000f4",
+                    "uuid": "7ce60660-d2a3-48f7-a0bf-3414ba9c7231"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "rh-bctl-5-gen10",
+                    "__number": 2,
+                    "__result": "Ok",
+                    "__task": "Oneview Unconfig",
+                    "__task_action": "ansible.builtin.include_tasks",
+                    "duration": 0.032375,
+                    "end": "2023-03-28T09:10:41.814742",
+                    "event_loop": null,
+                    "host": "rh-bctl-5-gen10",
+                    "play": "esx_hosts",
+                    "play_pattern": "esx_hosts",
+                    "play_uuid": "9acff4cc-7e90-9eb1-7105-000000000022",
+                    "playbook": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml",
+                    "playbook_uuid": "dcc04618-0173-49ea-8117-33116bd9ada6",
+                    "remote_addr": "rh-bctl-5-gen10",
+                    "res": {
+                        "changed": false,
+                        "include": "oneview_unconfig.yml",
+                        "include_args": {}
+                    },
+                    "resolved_action": null,
+                    "resolved_role": "mschreie.bcl.oneview_config",
+                    "role": "oneview_config",
+                    "start": "2023-03-28T09:10:41.782367",
+                    "task": "Oneview Unconfig",
+                    "task_action": "ansible.builtin.include_tasks",
+                    "task_args": "",
+                    "task_path": "/home/mschreie/projects/bcluc1_esxideploy/collections/ansible_collections/mschreie/bcl/roles/oneview_config/tasks/main.yml:8",
+                    "task_uuid": "9acff4cc-7e90-9eb1-7105-0000000000f5",
+                    "uuid": "5d78cfb2-9c1d-4298-b12b-a6ca876198ed"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "1s",
+                    "__host": "rh-bctl-5-gen10",
+                    "__number": 3,
+                    "__result": "Ignored",
+                    "__task": "Switch Server off",
+                    "__task_action": "hpe.oneview.oneview_server_hardware",
+                    "duration": 1.076759,
+                    "end": "2023-03-28T09:10:42.909048",
+                    "event_loop": null,
+                    "host": "rh-bctl-5-gen10",
+                    "ignore_errors": true,
+                    "play": "esx_hosts",
+                    "play_pattern": "esx_hosts",
+                    "play_uuid": "9acff4cc-7e90-9eb1-7105-000000000022",
+                    "playbook": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml",
+                    "playbook_uuid": "dcc04618-0173-49ea-8117-33116bd9ada6",
+                    "remote_addr": "rh-bctl-5-gen10",
+                    "res": {
+                        "_ansible_delegated_vars": {
+                            "ansible_connection": "local",
+                            "ansible_host": "localhost",
+                            "ansible_port": null,
+                            "ansible_user": null
+                        },
+                        "_ansible_no_log": null,
+                        "changed": false,
+                        "exception": "Traceback (most recent call last):\n  File \"/tmp/ansible_hpe.oneview.oneview_server_hardware_payload_2hzonxvz/ansible_hpe.oneview.oneview_server_hardware_payload.zip/ansible_collections/hpe/oneview/plugins/module_utils/oneview.py\", line 698, in run\n    result = self.execute_module()\n  File \"/tmp/ansible_hpe.oneview.oneview_server_hardware_payload_2hzonxvz/ansible_hpe.oneview.oneview_server_hardware_payload.zip/ansible_collections/hpe/oneview/plugins/modules/oneview_server_hardware.py\", line 331, in execute_module\nansible_collections.hpe.oneview.plugins.module_utils.oneview.OneViewModuleResourceNotFound: The provided Server Hardware was not found.\n",
+                        "invocation": {
+                            "module_args": {
+                                "api_version": 2800,
+                                "auth_login_domain": "local",
+                                "config": null,
+                                "data": {
+                                    "force": false,
+                                    "name": "rh-bctl-5-gen10.hpintelco.org",
+                                    "powerStateData": {
+                                        "powerControl": "MomentaryPress",
+                                        "powerState": "Off"
+                                    }
+                                },
+                                "hostname": "10.6.55.9",
+                                "password": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+                                "sessionID": null,
+                                "state": "power_state_set",
+                                "username": "Administrator",
+                                "validate_etag": true
+                            }
+                        },
+                        "msg": "The provided Server Hardware was not found.",
+                        "warnings": [
+                            "Distribution rhel 8.7 on host rh-bctl-5-gen10 should use /usr/libexec/platform-python, but is using /usr/bin/python3.9, since the discovered platform python interpreter was not present. See https://docs.ansible.com/ansible-core/2.13/reference_appendices/interpreter_discovery.html for more information."
+                        ]
+                    },
+                    "resolved_action": "hpe.oneview.oneview_server_hardware",
+                    "resolved_role": "mschreie.bcl.oneview_config",
+                    "role": "oneview_config",
+                    "start": "2023-03-28T09:10:41.832289",
+                    "task": "Switch Server off",
+                    "task_action": "hpe.oneview.oneview_server_hardware",
+                    "task_args": "",
+                    "task_path": "/home/mschreie/projects/bcluc1_esxideploy/collections/ansible_collections/mschreie/bcl/roles/oneview_config/tasks/oneview_unconfig.yml:2",
+                    "task_uuid": "9acff4cc-7e90-9eb1-7105-00000000010c",
+                    "uuid": "3111e9d9-8605-4a70-a803-1e658d6a859a"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "1s",
+                    "__host": "rh-bctl-5-gen10",
+                    "__number": 4,
+                    "__result": "Ok",
+                    "__task": "Remove a server profile",
+                    "__task_action": "hpe.oneview.oneview_server_profile",
+                    "duration": 1.081148,
+                    "end": "2023-03-28T09:10:43.998371",
+                    "event_loop": null,
+                    "host": "rh-bctl-5-gen10",
+                    "play": "esx_hosts",
+                    "play_pattern": "esx_hosts",
+                    "play_uuid": "9acff4cc-7e90-9eb1-7105-000000000022",
+                    "playbook": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml",
+                    "playbook_uuid": "dcc04618-0173-49ea-8117-33116bd9ada6",
+                    "remote_addr": "rh-bctl-5-gen10",
+                    "res": {
+                        "_ansible_delegated_vars": {
+                            "ansible_connection": "local",
+                            "ansible_host": "localhost",
+                            "ansible_port": null,
+                            "ansible_user": null
+                        },
+                        "_ansible_no_log": null,
+                        "changed": false,
+                        "invocation": {
+                            "module_args": {
+                                "api_version": 2800,
+                                "auth_login_domain": "local",
+                                "auto_assign_server_hardware": true,
+                                "config": null,
+                                "data": {
+                                    "bios": {
+                                        "manageBios": false
+                                    },
+                                    "boot": {
+                                        "manageBoot": false,
+                                        "order": [
+                                            "CD",
+                                            "USB",
+                                            "HardDisk",
+                                            "PXE"
+                                        ]
+                                    },
+                                    "bootMode": {
+                                        "manageMode": true,
+                                        "mode": "BIOS",
+                                        "pxeBootPolicy": null,
+                                        "secureBoot": "Unmanaged"
+                                    },
+                                    "firmware": {
+                                        "manageFirmware": false
+                                    },
+                                    "localStorage": {
+                                        "controllers": [],
+                                        "reapplyState": "NotApplying",
+                                        "sasLogicalJBODs": []
+                                    },
+                                    "managementProcessor": {
+                                        "manageMp": false
+                                    },
+                                    "name": "rh-bctl-5-gen10",
+                                    "osDeploymentSettings": null,
+                                    "serverHardwareName": "rh-bctl-5-gen10.hpintelco.org",
+                                    "serverHardwareTypeName": "DL380 Gen10"
+                                },
+                                "hostname": "10.6.55.9",
+                                "params": {
+                                    "force": true
+                                },
+                                "password": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+                                "sessionID": null,
+                                "state": "absent",
+                                "username": "Administrator",
+                                "validate_etag": true
+                            }
+                        },
+                        "msg": "Nothing do.",
+                        "warnings": [
+                            "Distribution rhel 8.7 on host rh-bctl-5-gen10 should use /usr/libexec/platform-python, but is using /usr/bin/python3.9, since the discovered platform python interpreter was not present. See https://docs.ansible.com/ansible-core/2.13/reference_appendices/interpreter_discovery.html for more information."
+                        ]
+                    },
+                    "resolved_action": "hpe.oneview.oneview_server_profile",
+                    "resolved_role": "mschreie.bcl.oneview_config",
+                    "role": "oneview_config",
+                    "start": "2023-03-28T09:10:42.917223",
+                    "task": "Remove a server profile",
+                    "task_action": "hpe.oneview.oneview_server_profile",
+                    "task_args": "",
+                    "task_path": "/home/mschreie/projects/bcluc1_esxideploy/collections/ansible_collections/mschreie/bcl/roles/oneview_config/tasks/oneview_unconfig.yml:20",
+                    "task_uuid": "9acff4cc-7e90-9eb1-7105-00000000010d",
+                    "uuid": "3371841a-e835-4fd6-ab1a-edf12748b2f6"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "1s",
+                    "__host": "rh-bctl-5-gen10",
+                    "__number": 5,
+                    "__result": "Ok",
+                    "__task": "Remove a Server Hardware from Oneview",
+                    "__task_action": "hpe.oneview.oneview_server_hardware",
+                    "duration": 0.976698,
+                    "end": "2023-03-28T09:10:44.984106",
+                    "event_loop": null,
+                    "host": "rh-bctl-5-gen10",
+                    "play": "esx_hosts",
+                    "play_pattern": "esx_hosts",
+                    "play_uuid": "9acff4cc-7e90-9eb1-7105-000000000022",
+                    "playbook": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml",
+                    "playbook_uuid": "dcc04618-0173-49ea-8117-33116bd9ada6",
+                    "remote_addr": "rh-bctl-5-gen10",
+                    "res": {
+                        "_ansible_delegated_vars": {
+                            "ansible_connection": "local",
+                            "ansible_host": "localhost",
+                            "ansible_port": null,
+                            "ansible_user": null
+                        },
+                        "_ansible_no_log": null,
+                        "changed": false,
+                        "invocation": {
+                            "module_args": {
+                                "api_version": 2800,
+                                "auth_login_domain": "local",
+                                "config": null,
+                                "data": {
+                                    "name": "rh-bctl-5-gen10.hpintelco.org"
+                                },
+                                "hostname": "10.6.55.9",
+                                "password": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+                                "sessionID": null,
+                                "state": "absent",
+                                "username": "Administrator",
+                                "validate_etag": true
+                            }
+                        },
+                        "msg": "Server Hardware is already absent.",
+                        "warnings": [
+                            "Distribution rhel 8.7 on host rh-bctl-5-gen10 should use /usr/libexec/platform-python, but is using /usr/bin/python3.9, since the discovered platform python interpreter was not present. See https://docs.ansible.com/ansible-core/2.13/reference_appendices/interpreter_discovery.html for more information."
+                        ]
+                    },
+                    "resolved_action": "hpe.oneview.oneview_server_hardware",
+                    "resolved_role": "mschreie.bcl.oneview_config",
+                    "role": "oneview_config",
+                    "start": "2023-03-28T09:10:44.007408",
+                    "task": "Remove a Server Hardware from Oneview",
+                    "task_action": "hpe.oneview.oneview_server_hardware",
+                    "task_args": "",
+                    "task_path": "/home/mschreie/projects/bcluc1_esxideploy/collections/ansible_collections/mschreie/bcl/roles/oneview_config/tasks/oneview_unconfig.yml:36",
+                    "task_uuid": "9acff4cc-7e90-9eb1-7105-00000000010e",
+                    "uuid": "bfbfd44c-3bdd-485b-9da7-14139a919fec"
+                }
+            ],
+            "uuid": "9acff4cc-7e90-9eb1-7105-000000000022"
+        }
+    ],
+    "settings_entries": {
+        "ansible-navigator": {
+            "ansible": {
+                "cmdline": "-e @bcluc1_esxideploy_config/extra_vars.yml -e @bcluc1_esxideploy_config/vaulted_vars.yml -e debug=true -e remove=true",
+                "config": {
+                    "help": false
+                },
+                "doc": {
+                    "help": false,
+                    "plugin": {
+                        "type": "module"
+                    }
+                },
+                "inventory": {
+                    "help": false
+                },
+                "playbook": {
+                    "help": false,
+                    "path": "/home/mschreie/projects/bcluc1_esxideploy/workflow.yml"
+                }
+            },
+            "ansible-builder": {
+                "help": false,
+                "workdir": "/home/mschreie/projects/bcluc1_esxideploy"
+            },
+            "app": "run",
+            "collection-doc-cache-path": "/home/mschreie/.cache/ansible-navigator/collection_doc_cache.db",
+            "color": {
+                "enable": true,
+                "osc4": true
+            },
+            "editor": {
+                "command": "vi +{line_number} {filename}",
+                "console": true
+            },
+            "exec": {
+                "command": "/bin/bash",
+                "shell": true
+            },
+            "execution-environment": {
+                "container-engine": "podman",
+                "enabled": true,
+                "image": "localhost/bcl-ov:4",
+                "pull": {
+                    "policy": "never"
+                }
+            },
+            "images": {
+                "details": [
+                    "everything"
+                ]
+            },
+            "logging": {
+                "append": true,
+                "file": "/home/mschreie/projects/bcluc1_esxideploy/ansible-navigator.log",
+                "level": "warning"
+            },
+            "mode": "interactive",
+            "playbook-artifact": {
+                "enable": true,
+                "save-as": "{playbook_dir}/{playbook_name}-artifact-{time_stamp}.json"
+            },
+            "settings": {
+                "effective": false,
+                "sample": false,
+                "schema": "json",
+                "sources": false
+            },
+            "time-zone": "UTC"
+        }
+    },
+    "settings_sources": {
+        "ansible-navigator.ansible-builder.help": "Defaults",
+        "ansible-navigator.ansible-builder.workdir": "Defaults",
+        "ansible-navigator.ansible-lint.config": "Not set",
+        "ansible-navigator.ansible-lint.lintables": "Not set",
+        "ansible-navigator.ansible-runner.artifact-dir": "Not set",
+        "ansible-navigator.ansible-runner.rotate-artifacts-count": "Not set",
+        "ansible-navigator.ansible-runner.timeout": "Not set",
+        "ansible-navigator.ansible.cmdline": "Previous cli command",
+        "ansible-navigator.ansible.config.help": "Defaults",
+        "ansible-navigator.ansible.config.path": "Not set",
+        "ansible-navigator.ansible.doc.help": "Defaults",
+        "ansible-navigator.ansible.doc.plugin.name": "Not set",
+        "ansible-navigator.ansible.doc.plugin.type": "Defaults",
+        "ansible-navigator.ansible.inventory.entries": "Not set",
+        "ansible-navigator.ansible.inventory.help": "Defaults",
+        "ansible-navigator.ansible.playbook.help": "Defaults",
+        "ansible-navigator.ansible.playbook.path": "Previous cli command",
+        "ansible-navigator.app": "Command line",
+        "ansible-navigator.collection-doc-cache-path": "Defaults",
+        "ansible-navigator.color.enable": "Defaults",
+        "ansible-navigator.color.osc4": "Defaults",
+        "ansible-navigator.editor.command": "Defaults",
+        "ansible-navigator.editor.console": "Defaults",
+        "ansible-navigator.exec.command": "Defaults",
+        "ansible-navigator.exec.shell": "Defaults",
+        "ansible-navigator.execution-environment.container-engine": "Automatically determined",
+        "ansible-navigator.execution-environment.container-options": "Not set",
+        "ansible-navigator.execution-environment.enabled": "Defaults",
+        "ansible-navigator.execution-environment.environment-variables.pass": "Not set",
+        "ansible-navigator.execution-environment.environment-variables.set": "Not set",
+        "ansible-navigator.execution-environment.image": "Previous cli command",
+        "ansible-navigator.execution-environment.pull.arguments": "Not set",
+        "ansible-navigator.execution-environment.pull.policy": "Previous cli command",
+        "ansible-navigator.execution-environment.volume-mounts": "Not set",
+        "ansible-navigator.images.details": "Defaults",
+        "ansible-navigator.inventory-columns": "Not set",
+        "ansible-navigator.logging.append": "Defaults",
+        "ansible-navigator.logging.file": "Defaults",
+        "ansible-navigator.logging.level": "Defaults",
+        "ansible-navigator.mode": "Defaults",
+        "ansible-navigator.playbook-artifact.enable": "Defaults",
+        "ansible-navigator.playbook-artifact.replay": "Not set",
+        "ansible-navigator.playbook-artifact.save-as": "Defaults",
+        "ansible-navigator.settings.effective": "Defaults",
+        "ansible-navigator.settings.sample": "Defaults",
+        "ansible-navigator.settings.schema": "Defaults",
+        "ansible-navigator.settings.sources": "Defaults",
+        "ansible-navigator.time-zone": "Defaults",
+        "settings_file_path": "None",
+        "settings_file_source": "None"
+    },
+    "status": "successful",
+    "status_color": 10,
+    "stdout": [
+        "\u001b[1;35m[WARNING]: provided hosts list is empty, only localhost is available. Note that\u001b[0m",
+        "\u001b[1;35mthe implicit localhost does not match 'all'\u001b[0m",
+        "",
+        "PLAY [localhost] ***************************************************************",
+        "",
+        "TASK [Add OneView Host to inventory] *******************************************",
+        "\u001b[1;35m[WARNING]: A duplicate localhost-like entry was found (localhost). First found\u001b[0m",
+        "\u001b[1;35mlocalhost was localhost\u001b[0m",
+        "\u001b[0;33mchanged: [localhost] => (item={'name': 'localhost', 'ansible_connection': 'local'})\u001b[0m",
+        "\u001b[0;33mchanged: [localhost] => (item={'name': 'bastion_host', 'host_ip': '10.6.55.4'})\u001b[0m",
+        "\u001b[0;33mchanged: [localhost] => (item={'name': 'oneview_host', 'host_ip': 'oneview.bcl.redhat.hpecic.com'})\u001b[0m",
+        "",
+        "TASK [Add physical hosts to inventory] *****************************************",
+        "\u001b[0;33mchanged: [localhost] => (item={'name': 'rh-bctl-5-gen10', 'ilo_ip': '10.6.55.205', 'host_ip': '10.6.54.205', 'host_nic': 'vmnic4', 'host_bootproto': 'static', 'host_mask': '255.255.255.0', 'host_gw': '10.6.54.1', 'host_nameserver': '10.6.55.4'})\u001b[0m",
+        "",
+        "TASK [Add additional Host to inventory] ****************************************",
+        "\u001b[0;33mchanged: [localhost] => (item=bastion)\u001b[0m",
+        "\u001b[0;33mchanged: [localhost] => (item=controller)\u001b[0m",
+        "\u001b[0;33mchanged: [localhost] => (item=vcenter)\u001b[0m",
+        "",
+        "PLAY [localhost] ***************************************************************",
+        "",
+        "TASK [include nsupdate] ********************************************************",
+        "\u001b[0;36mskipping: [localhost] => (item={'record': 'rh-bctl-5-gen10-ilo.bcl.redhat.hpecic.com.', 'value': '10.6.55.205', 'rrtype': 'both', 'instruction': 'add', 'nameserver': 'bastion'}) \u001b[0m",
+        "\u001b[0;36mskipping: [localhost] => (item={'record': 'rh-bctl-5-gen10.bcl.redhat.hpecic.com.', 'value': '10.6.54.205', 'rrtype': 'both', 'instruction': 'add', 'nameserver': 'bastion'}) \u001b[0m",
+        "",
+        "PLAY [esx_hosts] ***************************************************************",
+        "",
+        "TASK [configure physical hosts via oneview] ************************************",
+        "\u001b[0;36mskipping: [rh-bctl-5-gen10]\u001b[0m",
+        "",
+        "PLAY [esx_hosts] ***************************************************************",
+        "",
+        "TASK [sysprep esxi iso for hands free installation] ****************************",
+        "\u001b[0;36mskipping: [rh-bctl-5-gen10]\u001b[0m",
+        "",
+        "PLAY [esx_hosts] ***************************************************************",
+        "",
+        "TASK [install esxi on bare metal nodes] ****************************************",
+        "\u001b[0;36mskipping: [rh-bctl-5-gen10]\u001b[0m",
+        "",
+        "PLAY [esx_hosts] ***************************************************************",
+        "",
+        "TASK [add esxi hosts to vcenter] ***********************************************",
+        "\u001b[0;36mskipping: [rh-bctl-5-gen10]\u001b[0m",
+        "",
+        "PLAY [esx_hosts] ***************************************************************",
+        "",
+        "TASK [add esxi hosts to vcenter] ***********************************************",
+        "",
+        "TASK [mschreie.bcl.add_esxi_to_vcenter : Add esxi hosts to vcenter] ************",
+        "\u001b[0;36mskipping: [rh-bctl-5-gen10]\u001b[0m",
+        "",
+        "TASK [mschreie.bcl.add_esxi_to_vcenter : Remove esxi hosts from vcenter] *******",
+        "\u001b[0;36mincluded: /home/mschreie/projects/bcluc1_esxideploy/collections/ansible_collections/mschreie/bcl/roles/add_esxi_to_vcenter/tasks/remove-esxi-from-vcenter.yml for rh-bctl-5-gen10\u001b[0m",
+        "",
+        "TASK [mschreie.bcl.add_esxi_to_vcenter : Disconnect the host(s)] ***************",
+        "\u001b[1;35m[WARNING]: Distribution rhel 8.7 on host rh-bctl-5-gen10 should use\u001b[0m",
+        "\u001b[1;35m/usr/libexec/platform-python, but is using /usr/bin/python3.9, since the\u001b[0m",
+        "\u001b[1;35mdiscovered platform python interpreter was not present. See\u001b[0m",
+        "\u001b[1;35mhttps://docs.ansible.com/ansible-\u001b[0m",
+        "\u001b[1;35mcore/2.13/reference_appendices/interpreter_discovery.html for more information.\u001b[0m",
+        "\u001b[0;32mok: [rh-bctl-5-gen10 -> localhost]\u001b[0m",
+        "",
+        "PLAY [esx_hosts] ***************************************************************",
+        "",
+        "TASK [configure physical hosts via oneview] ************************************",
+        "",
+        "TASK [mschreie.bcl.oneview_config : Oneview Config] ****************************",
+        "\u001b[0;36mskipping: [rh-bctl-5-gen10]\u001b[0m",
+        "",
+        "TASK [mschreie.bcl.oneview_config : Oneview Unconfig] **************************",
+        "\u001b[0;36mincluded: /home/mschreie/projects/bcluc1_esxideploy/collections/ansible_collections/mschreie/bcl/roles/oneview_config/tasks/oneview_unconfig.yml for rh-bctl-5-gen10\u001b[0m",
+        "",
+        "TASK [mschreie.bcl.oneview_config : Switch Server off] *************************",
+        "\u001b[0;31mAn exception occurred during task execution. To see the full traceback, use -vvv. The error was: ansible_collections.hpe.oneview.plugins.module_utils.oneview.OneViewModuleResourceNotFound: The provided Server Hardware was not found.\u001b[0m",
+        "\u001b[0;31mfatal: [rh-bctl-5-gen10 -> localhost]: FAILED! => {\"changed\": false, \"msg\": \"The provided Server Hardware was not found.\"}\u001b[0m",
+        "\u001b[0;36m...ignoring\u001b[0m",
+        "",
+        "TASK [mschreie.bcl.oneview_config : Remove a server profile] *******************",
+        "\u001b[0;32mok: [rh-bctl-5-gen10 -> localhost]\u001b[0m",
+        "",
+        "TASK [mschreie.bcl.oneview_config : Remove a Server Hardware from Oneview] *****",
+        "\u001b[0;32mok: [rh-bctl-5-gen10 -> localhost]\u001b[0m",
+        "",
+        "PLAY RECAP *********************************************************************",
+        "\u001b[0;33mlocalhost\u001b[0m                  : \u001b[0;32mok=3   \u001b[0m \u001b[0;33mchanged=3   \u001b[0m unreachable=0    failed=0    \u001b[0;36mskipped=1   \u001b[0m rescued=0    ignored=0   ",
+        "\u001b[0;32mrh-bctl-5-gen10\u001b[0m            : \u001b[0;32mok=6   \u001b[0m changed=0    unreachable=0    failed=0    \u001b[0;36mskipped=6   \u001b[0m rescued=0    \u001b[1;35mignored=1   \u001b[0m"
+    ],
+    "version": "2.0.0"
+}

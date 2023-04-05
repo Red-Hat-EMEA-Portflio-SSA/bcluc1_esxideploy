@@ -1,0 +1,20 @@
+---
+- hosts: esx_hosts
+  gather_facts: false
+
+  collections:
+    - mschreie.bcl
+
+  tasks:
+    - name: add esxi hosts to vcenter
+      ansible.builtin.include_role:
+        name: mschreie.bcl.add_esxi_to_vcenter
+      vars:
+        vcenter_hostname: "{{ bclvmw_host }}"
+        vcenter_username: "{{ bclvmw_username }}"
+        vcenter_password: "{{ bclvmw_password }}"
+        vcenter_validate_certs: "{{ bclvmw_validate_certs }}"
+        vcenter_datacentername: '{{ bclvmw_datacentername }}'
+        esxi_hostname: "{{ host_ip  }}"
+        esxi_username: "root"
+        esxi_password: "{{ esxi_rootpw }}"
