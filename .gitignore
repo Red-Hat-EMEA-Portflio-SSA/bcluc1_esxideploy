@@ -1,3 +1,8 @@
-bcluc1_esxideploy_config
+collections/ansible_collections/
+bcluc1_esxideploy_config/
 ansible-navigator.log
 workflow-artifact-*.json
+VMware-VMvisor-Installer-*.iso
+ansible-automation-platform-setup*tar.gz
+ansible-automation-platform-setup*tgz
+*tgz
