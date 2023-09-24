@@ -30,16 +30,15 @@
         host_mask: "{{ item.host_mask | default (omit) }}"
         host_gw: "{{ item.host_gw | default (omit) }}"
         host_nameserver: "{{ item.host_nameserver | default (omit) }}"
-        groups: 
-          - "esx_hosts"
-          - "oneview_targets"
-      loop: "{{ oneview_machines }}"
+        groups:
+          - "uc1_targets"
+      loop: "{{ uc1_targets }}"
 
     - name: Add additional Host to inventory
       add_host:
         name: "{{  lookup('ansible.builtin.vars', item + '_instance_name') }}"
         ansible_host: "{{ (lookup('ansible.builtin.vars', item + '_instance_parameters')).vmware_ip_address }}"
-      loop: 
+      loop:
         - bastion
         - controller
         - vcenter

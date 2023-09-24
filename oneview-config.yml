@@ -1,5 +1,5 @@
 ---
-- hosts: esx_hosts
+- hosts: uc1_targets
   gather_facts: false
 
   collections:
