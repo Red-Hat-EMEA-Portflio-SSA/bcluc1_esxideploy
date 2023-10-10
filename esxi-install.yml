@@ -13,12 +13,13 @@
       ansible.builtin.include_role:
         name: portfoliossa.bcl.esxi_iso_prep
 
-- hosts: esx_hosts
-  gather_facts: false
-
-  collections:
-    - hpe.oneview
-    - ansible.posix 
+# targetting WRONG hosts should also be uc1_targets
+#- hosts: esx_hosts
+#  gather_facts: false
+#
+#  collections:
+#    - hpe.oneview
+#    - ansible.posix 
 
   tasks:
   - name: install esxi on bare metal nodes
